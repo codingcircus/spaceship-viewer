@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Millenium Falcon",
+    "pilot": "Han Solo",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "USS Enterprise",
+    "pilot": "Sulu",
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "name": "Tardis",
+    "pilot": "The Doctor",
+    "rating": 4
+  }
+]

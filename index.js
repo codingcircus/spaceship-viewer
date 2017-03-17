@@ -16,16 +16,11 @@ app.use(sassMiddleware({
   dest: path.join(__dirname, 'public'),
 }))
 
-// Setup ejs templates
-app.set('view engine', 'ejs');
-app.set('views', 'views')
-
 // api calls
 app.get('/v1/spaceships', (req, res) => {
   res.json(spaceships);
 });
 
-// api calls
 app.get('/v1/spaceships/:id', (req, res) => {
   const spaceship = spaceships.find(spaceship => spaceship.id === parseInt(req.params.id, 10));
   res.json(spaceship);

@@ -1,7 +1,7 @@
-System.register(['@angular/router', './component.spaceships'], function(exports_1, context_1) {
+System.register(['@angular/router', './component.spaceships', './component.spaceship-details'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var router_1, component_spaceships_1;
+    var router_1, component_spaceships_1, component_spaceship_details_1;
     var routes, routing;
     return {
         setters:[
@@ -10,12 +10,19 @@ System.register(['@angular/router', './component.spaceships'], function(exports_
             },
             function (component_spaceships_1_1) {
                 component_spaceships_1 = component_spaceships_1_1;
+            },
+            function (component_spaceship_details_1_1) {
+                component_spaceship_details_1 = component_spaceship_details_1_1;
             }],
         execute: function() {
             routes = [
                 {
                     path: 'spaceships',
                     component: component_spaceships_1.SpaceshipsComponent,
+                },
+                {
+                    path: 'spaceships/:id',
+                    component: component_spaceship_details_1.SpaceshipDetailsComponent,
                 },
                 {
                     path: '',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SpaceshipService } from './services/spaceship.service';
 import { Spaceship } from './interfaces/spaceship';
+import { SpaceshipService } from './services/spaceship.service';
 
 @Component({
   selector: 'spaceship',

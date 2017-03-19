@@ -44,6 +44,8 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                             .subscribe(function (spaceship) { return _this.data = spaceship; });
                     });
                 };
+                SpaceshipDetailsComponent.prototype.ngAfterViewChecked = function () {
+                };
                 SpaceshipDetailsComponent = __decorate([
                     core_1.Component({
                         selector: 'spaceship-details',

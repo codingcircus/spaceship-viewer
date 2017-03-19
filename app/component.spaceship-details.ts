@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Spaceship } from './interfaces/spaceship';
 import { SpaceshipService } from './services/spaceship.service';
 import { ActivatedRoute } from '@angular/router';
@@ -16,7 +16,7 @@ import { ActivatedRoute } from '@angular/router';
   ],
 })
 
-export class SpaceshipDetailsComponent implements OnInit {
+export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
   data: Spaceship = {
     id: 0,
     name: 'Loading …',
@@ -31,6 +31,10 @@ export class SpaceshipDetailsComponent implements OnInit {
       this._spaceshipService.get(id)
         .subscribe(spaceship => this.data = spaceship);
     });
+  }
+
+  ngAfterViewChecked() {
+    
   }
 
   constructor(

@@ -2,7 +2,6 @@
 
 const
   express      = require('express'),
-  sassMiddleware = require('node-sass-middleware'),
   path = require('path'),
   spaceships       = require('./data/spaceships.json');
 

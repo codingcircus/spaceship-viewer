@@ -15,7 +15,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
     function mapSpaceships(response) {
         // The response of the API has a results
         // property with the actual results
-        return response.json().results.map(toSpaceship);
+        return response.json().map(toSpaceship);
     }
     function toSpaceship(r) {
         var spaceship = ({
@@ -24,7 +24,6 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
             pilot: r.pilot,
             rating: parseInt(r.rating, 10),
         });
-        console.log('Parsed person:', spaceship);
         return spaceship;
     }
     return {

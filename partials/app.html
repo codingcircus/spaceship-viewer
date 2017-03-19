@@ -1,8 +1,5 @@
 <div class="app">
-  <header class="main-header">
-    <h1 class="main-header__heading">{{ title }}</h1>
-    <p class="main-header__subline">An angular2 app<br />by {{ author }}</p>
-  </header>
+  <app-header></app-header>
   <main class="main-content">
     <header class="search-bar">
       <input 
@@ -18,8 +15,5 @@
   </main>
 
   <spaceship-details *ngIf="currentSpaceship" [data]=currentSpaceship></spaceship-details>
-
-  <footer class="main-footer">
-    Current Count: {{ spaceships.length }}
-  </footer>
+  <app-footer></app-footer>
 </div>

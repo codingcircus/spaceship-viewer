@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SpaceshipComponent } from './component.spaceship';
 import { Spaceship } from './interfaces/spaceship';
 import { SpaceshipService } from './services/spaceship.service';
 

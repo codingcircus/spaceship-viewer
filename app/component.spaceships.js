@@ -11,28 +11,27 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var SpaceshipComponent;
+    var SpaceshipsComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            SpaceshipComponent = (function () {
-                function SpaceshipComponent() {
+            SpaceshipsComponent = (function () {
+                function SpaceshipsComponent() {
                 }
-                SpaceshipComponent = __decorate([
+                SpaceshipsComponent = __decorate([
                     core_1.Component({
                         selector: 'spaceship',
-                        templateUrl: 'partials/spaceship.html',
-                        inputs: ['data'],
+                        templateUrl: 'partials/spaceships.html',
                     }), 
                     __metadata('design:paramtypes', [])
-                ], SpaceshipComponent);
-                return SpaceshipComponent;
+                ], SpaceshipsComponent);
+                return SpaceshipsComponent;
             }());
-            exports_1("SpaceshipComponent", SpaceshipComponent);
+            exports_1("SpaceshipsComponent", SpaceshipsComponent);
         }
     }
 });
-//# sourceMappingURL=component.spaceship.js.map
+//# sourceMappingURL=component.spaceships.js.map

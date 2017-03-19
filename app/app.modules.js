@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/http', '@angular/platform-browser', '@angular/forms', './app.routes', './component.app', './component.spaceships', './component.spaceship-details', './component.app-header', './component.app-footer', './pipe.search'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/http', '@angular/platform-browser', '@angular/forms', './app.routes', './component.app', './component.spaceships', './component.spaceship-details', './component.app-header', './pipe.search'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/http', '@angular/platform-browser', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, platform_browser_1, forms_1, app_routes_1, component_app_1, component_spaceships_1, component_spaceship_details_1, component_app_header_1, component_app_footer_1, pipe_search_1;
+    var core_1, http_1, platform_browser_1, forms_1, app_routes_1, component_app_1, component_spaceships_1, component_spaceship_details_1, component_app_header_1, pipe_search_1;
     var AppModule;
     return {
         setters:[
@@ -41,9 +41,6 @@ System.register(['@angular/core', '@angular/http', '@angular/platform-browser', 
             function (component_app_header_1_1) {
                 component_app_header_1 = component_app_header_1_1;
             },
-            function (component_app_footer_1_1) {
-                component_app_footer_1 = component_app_footer_1_1;
-            },
             function (pipe_search_1_1) {
                 pipe_search_1 = pipe_search_1_1;
             }],
@@ -62,7 +59,6 @@ System.register(['@angular/core', '@angular/http', '@angular/platform-browser', 
                         declarations: [
                             component_app_1.AppComponent,
                             component_app_header_1.AppHeaderComponent,
-                            component_app_footer_1.AppFooterComponent,
                             component_spaceships_1.SpaceshipsComponent,
                             component_spaceship_details_1.SpaceshipDetailsComponent,
                             pipe_search_1.SearchPipe,

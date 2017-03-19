@@ -1,17 +1,23 @@
-<figure>
-  <img [src]="data.image" />
-</figure>
-<div class="card">
-  <h1>{{ data.name }}</h1>
-  <table>
-    <tr>
-      <td>Pilot</td>
-      <td>{{ data.pilot }}</td>
-    </tr>
-    <tr>
-      <td>Rating</td>
-      <td>{{ data.rating }}</td>
-    </tr>
-  </table>
+<div class="top-bar">
   <a href="#" [routerLink]="['/spaceships']" class="btn">Back</a>
+</div>
+<div class="card">
+  <div class="card__inner">
+    <figure>
+      <img [src]="data.image" />
+    </figure>
+    <div class="card__content">
+      <h1>{{ data.name }}</h1>
+      <table border="1">
+        <tr>
+          <td>Pilot</td>
+          <td>{{ data.pilot }}</td>
+        </tr>
+        <tr>
+          <td>Rating</td>
+          <td>{{ data.rating }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

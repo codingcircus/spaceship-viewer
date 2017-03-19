@@ -18,7 +18,7 @@
 .data-item__content {
   display: block;
   width: 100%;
-  padding: .7rem .14rem;
+  padding: .7rem 1.4rem;
   text-decoration: none;
   background: #fcfcfc;
   transition: background .1s ease-in-out;

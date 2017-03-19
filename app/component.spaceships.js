@@ -36,7 +36,10 @@ System.register(['@angular/core', './services/spaceship.service'], function(expo
                     core_1.Component({
                         selector: 'spaceship',
                         templateUrl: 'partials/spaceships.html',
-                        styleUrls: ['css/spaceships.css'],
+                        styleUrls: [
+                            'css/top-bar.css',
+                            'css/spaceships.css',
+                        ],
                         providers: [
                             spaceship_service_1.SpaceshipService
                         ],

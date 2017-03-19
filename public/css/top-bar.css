@@ -1,0 +1,28 @@
+.top-bar {
+  width: 100%;
+  border-bottom: .2rem rgba(0,0,0,.3) solid;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #0F88CB;
+  padding: 0 .7rem;
+  color: white;
+  height: 6rem;
+}
+
+label {
+  padding-right: .7rem; 
+}
+
+.input-search {
+  color: black;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  height: 4.2rem;
+  padding: .7rem 1.4rem;
+  background-color: #fff;
+  border: 0;
+  border-left: .1rem solid #e2e2e2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

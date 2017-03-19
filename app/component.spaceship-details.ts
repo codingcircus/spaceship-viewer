@@ -6,6 +6,11 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'spaceship-details',
   templateUrl: 'partials/spaceship-details.html',
+  styleUrls: [
+    './css/top-bar.css',
+    './css/card.css',
+    './css/form.css',
+  ],
   providers: [
     SpaceshipService
   ],

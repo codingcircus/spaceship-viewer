@@ -1,5 +1,6 @@
-<header class="search-bar">
-  <input class="input-search" [(ngModel)]="query" placeholder="Search for spaceship">
+<header class="top-bar">
+  <label for="search">Search for</label>
+  <input class="input-search" [(ngModel)]="query" id="search" placeholder="Spaceship …">
 </header>
 <ul class="data-list">
   <li class="data-item" *ngFor="let item of (spaceships | search: query)">

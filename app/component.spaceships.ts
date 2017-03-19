@@ -5,7 +5,10 @@ import { SpaceshipService } from './services/spaceship.service';
 @Component({
   selector: 'spaceship',
   templateUrl: 'partials/spaceships.html',
-  styleUrls: ['css/spaceships.css'],
+  styleUrls: [
+    'css/top-bar.css',
+    'css/spaceships.css',
+  ],
   providers: [
     SpaceshipService
   ],

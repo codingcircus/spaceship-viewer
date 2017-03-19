@@ -1,0 +1,23 @@
+.btn {
+  text-decoration: none;
+  border: 0.1rem solid currentColor;
+  border-radius: .2rem;
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  background: rgba(18, 172, 255, 0);
+  transition: background-color .1s ease-in-out;
+}
+
+.btn:link,
+.btn:visited {
+  color: white;
+}
+
+.btn:hover {
+  color: white;
+  background: rgba(18, 172, 255, 0.4);
+}
+
+.btn:active {
+  background: rgba(18, 172, 255, 0.7);
+}

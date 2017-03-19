@@ -48,6 +48,11 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                     core_1.Component({
                         selector: 'spaceship-details',
                         templateUrl: 'partials/spaceship-details.html',
+                        styleUrls: [
+                            './css/top-bar.css',
+                            './css/card.css',
+                            './css/form.css',
+                        ],
                         providers: [
                             spaceship_service_1.SpaceshipService
                         ],

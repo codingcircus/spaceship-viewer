@@ -1,0 +1,38 @@
+.data-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.data-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border-bottom: .2rem solid #e2e2e2;
+  text-transform: none;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+.data-item__content {
+  display: block;
+  width: 100%;
+  padding: .7rem .14rem;
+  text-decoration: none;
+  background: #fcfcfc;
+  transition: background .1s ease-in-out;
+}
+
+.data-item__content--link:link,
+.data-item__content--link:visited {
+  color: inherit;
+}
+
+.data-item__content--link:hover {
+  background: #fff;
+}
+
+.data-item__content--link:active {
+  background: #bcbcbc;
+}

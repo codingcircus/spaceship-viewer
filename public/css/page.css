@@ -25,11 +25,18 @@ body {
 .app {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
   color: #fff;
   text-transform: uppercase;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  height: calc(100vh - 4.2rem);
+  overflow: auto;
+  color: #0c0c0c;
 }

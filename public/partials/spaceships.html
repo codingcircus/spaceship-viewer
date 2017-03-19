@@ -2,7 +2,7 @@
   <input class="input-search" [(ngModel)]="query" placeholder="Search for spaceship">
 </header>
 <ul class="data-list">
-  <li class="data-item" #spaceshipContainer (click)="showSpaceship(item)" *ngFor="let item of (spaceships | search: query)">
+  <li class="data-item" *ngFor="let item of (spaceships | search: query)">
     <a class="data-item__content data-item__content--link" href="#" [routerLink]="['/spaceships', item.id]">Name: {{item.name}}</a>
   </li>
 </ul>

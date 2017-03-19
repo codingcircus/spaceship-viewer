@@ -1,0 +1,25 @@
+<div class="app">
+  <header class="main-header">
+    <h1 class="main-header__heading">{{ title }}</h1>
+    <p class="main-header__subline">An angular2 app<br />by {{ author }}</p>
+  </header>
+  <main class="main-content">
+    <header class="search-bar">
+      <input 
+        class="search-bar__input" 
+        [(ngModel)]="query"
+        placeholder="Search for spaceship">
+    </header>
+    <ul class="data-list">
+      <li class="data-list__item" #spaceshipContainer (click)="showSpaceship(item)" *ngFor="let item of (spaceships | search: query)">
+        <spaceship [data]=item></spaceship>
+      </li>
+    </ul>
+  </main>
+
+  <spaceship-details *ngIf="currentSpaceship" [data]=currentSpaceship></spaceship-details>
+
+  <footer class="main-footer">
+    Current Count: {{ spaceships.length }}
+  </footer>
+</div>

@@ -22,6 +22,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
             id: parseInt(r.id),
             name: r.name,
             pilot: r.pilot,
+            image: r.image,
             rating: parseInt(r.rating, 10),
         });
         return spaceship;

@@ -16,6 +16,7 @@ export class SpaceshipDetailsComponent implements OnInit {
     id: 0,
     name: 'Loading …',
     pilot: 'Loading …',
+    image: '',
     rating: 0,
   };
   

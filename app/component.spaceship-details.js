@@ -32,6 +32,7 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                         id: 0,
                         name: 'Loading …',
                         pilot: 'Loading …',
+                        image: '',
                         rating: 0,
                     };
                 }

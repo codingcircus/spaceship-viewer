@@ -3,14 +3,14 @@
     "id": 1,
     "name": "Millenium Falcon",
     "pilot": "Han Solo",
-    "image": "http://vignette1.wikia.nocookie.net/starwars/images/4/43/MillenniumFalconTFA-Fathead.png/revision/latest?cb=20161110011442",
+    "image": "https://s-media-cache-ak0.pinimg.com/originals/c6/4f/92/c64f92e891bf36a7970777c25dc54c0d.png",
     "rating": 5
   },
   {
     "id": 2,
     "name": "USS Enterprise",
     "pilot": "Hikaru Sulu",
-    "image": "http://vignette1.wikia.nocookie.net/memoryalpha/images/b/b8/USS_Enterprise_%28NCC-1701-A%29_auf_dem_Weg_nach_Khitomer.jpg/revision/latest?cb=20130214113554&path-prefix=de",
+    "image": "https://s-media-cache-ak0.pinimg.com/originals/57/68/62/576862e3ce38914af252ed49e9a1afd1.jpg",
     "rating": 4.5
   },
   {

@@ -19,5 +19,47 @@
     "pilot": "The Doctor",
     "image": "http://www.thedoctorwhosite.co.uk/wp-images/tardis/console-room-series-1/tardis-console-series-1.jpg",
     "rating": 4
+  },
+  {
+    "id": 4,
+    "name": "USS Discovery One",
+    "pilot": "Dr. David Bowman and Dr. Frank Poole",
+    "image": "http://cdn.list25.com/wp-content/uploads/2013/05/Slide239.jpg",
+    "rating": 3
+  },
+  {
+    "id": 5,
+    "name": "Serenity",
+    "pilot": "Hoban Washburne",
+    "image": "http://cdn2.list25.com/wp-content/uploads/2013/05/Slide149.jpg",
+    "rating": 3.5
+  },
+  {
+    "id": 6,
+    "name": "USCSS Nostromo",
+    "pilot": "Arthur Dallas (Captain)",
+    "image": "http://cdn.list25.com/wp-content/uploads/2013/06/Slide1212.jpg",
+    "rating": 2
+  },
+  {
+    "id": 7,
+    "name": "Axiom",
+    "pilot": "AUTO",
+    "image": "https://s-media-cache-ak0.pinimg.com/originals/c3/b4/d2/c3b4d2942184de1f10396cdc20d11ae8.jpg",
+    "rating": 4.5
+  },
+  {
+    "id": 8,
+    "name": "Heart of Gold",
+    "pilot": "Zaphod Beeblebrox",
+    "image": "https://s-media-cache-ak0.pinimg.com/564x/de/e7/cd/dee7cdf3769c1798ae8c97453a461322.jpg",
+    "rating": 2
+  },
+  {
+    "id": 9,
+    "name": "Spaceship",
+    "pilot": "Benny",
+    "image": "https://i.ytimg.com/vi/lz4PCZ6iRyA/maxresdefault.jpg",
+    "rating": 5
   }
 ]

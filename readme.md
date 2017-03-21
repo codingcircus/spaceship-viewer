@@ -20,5 +20,5 @@ The frontend is made with angular 2. It uses multiple components to build the UI
 
 - navigate to the project directory with your command line tool of choice
 - `npm install` to install all required node_modules
+- `npm run production` to generate all app files
 - `npm start` to start the server. The command line tells you the url of your server
-- `npm run dev` to generate all app files

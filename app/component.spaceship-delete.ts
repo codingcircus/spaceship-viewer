@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Spaceship } from './interfaces/spaceship';
 import { SpaceshipService } from './services/spaceship.service';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -39,9 +40,14 @@ export class SpaceshipDeleteComponent implements OnInit, AfterViewChecked {
 
   constructor(
     private _spaceshipService : SpaceshipService,
-    private route: ActivatedRoute) {}
+    private route: ActivatedRoute,
+    private router: Router) {}
 
   onSubmit() {
-
+    this._spaceshipService.delete(this.data._id)
+      .subscribe(() => {
+        console.log('Success');
+        this.router.navigate(['/']);
+      });
   }
 }

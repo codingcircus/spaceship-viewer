@@ -31,6 +31,15 @@ router.post('/v1/spaceships', (req, res) => {
         msg: 'success'
       });
     });
+});
+
+router.delete('/v1/spaceships/:id', (req, res) => {
+  queries.delete(req.params.id)
+    .then(() => {
+      res.json({
+        msg: 'success'
+      });
+    })
 })
 
 module.exports = router;

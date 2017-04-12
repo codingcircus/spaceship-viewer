@@ -9,6 +9,7 @@ import { SpaceshipsComponent } from './component.spaceships';
 import { SpaceshipDetailsComponent } from './component.spaceship-details';
 import { AppHeaderComponent } from './component.app-header';
 import { SpaceshipAddComponent } from './component.spaceship-add';
+import { SpaceshipDeleteComponent } from './component.spaceship-delete'; 
 
 import { SearchPipe } from './pipe.search';
 
@@ -27,6 +28,7 @@ import { SearchPipe } from './pipe.search';
     SpaceshipDetailsComponent,
     SearchPipe,
     SpaceshipAddComponent,
+    SpaceshipDeleteComponent,
   ],
   bootstrap: [
     AppComponent,

@@ -1,7 +1,7 @@
-System.register(['@angular/router', './component.spaceships', './component.spaceship-details', './component.spaceship-add'], function(exports_1, context_1) {
+System.register(['@angular/router', './component.spaceships', './component.spaceship-details', './component.spaceship-add', './component.spaceship-delete'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var router_1, component_spaceships_1, component_spaceship_details_1, component_spaceship_add_1;
+    var router_1, component_spaceships_1, component_spaceship_details_1, component_spaceship_add_1, component_spaceship_delete_1;
     var routes, routing;
     return {
         setters:[
@@ -16,6 +16,9 @@ System.register(['@angular/router', './component.spaceships', './component.space
             },
             function (component_spaceship_add_1_1) {
                 component_spaceship_add_1 = component_spaceship_add_1_1;
+            },
+            function (component_spaceship_delete_1_1) {
+                component_spaceship_delete_1 = component_spaceship_delete_1_1;
             }],
         execute: function() {
             routes = [
@@ -26,6 +29,10 @@ System.register(['@angular/router', './component.spaceships', './component.space
                 {
                     path: 'spaceships',
                     component: component_spaceships_1.SpaceshipsComponent,
+                },
+                {
+                    path: 'spaceships/:id/delete',
+                    component: component_spaceship_delete_1.SpaceshipDeleteComponent,
                 },
                 {
                     path: 'spaceships/:id',

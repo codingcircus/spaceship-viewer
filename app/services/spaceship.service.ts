@@ -29,6 +29,11 @@ export class SpaceshipService {
     return this.http.post(`${this.baseUrl}/spaceships`, spaceship)
       .map(response => {});
   }
+
+  delete(id) {
+    return this.http.delete(`${this.baseUrl}/spaceships/${id}`)
+      .map(response => {});
+  }
 }
 
 function mapSpaceships(response: Response): Spaceship[] {

@@ -54,6 +54,10 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
                         .map(function (response) { return toSpaceship(response.json()); });
                     return spaceship$;
                 };
+                SpaceshipService.prototype.add = function (spaceship) {
+                    return this.http.post(this.baseUrl + "/spaceships", spaceship)
+                        .map(function (response) { });
+                };
                 SpaceshipService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [http_1.Http])

@@ -15,6 +15,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/spaceships',
     pathMatch: 'full',
+  },
+  {
+    path: 'spaceships/add',
+    component: SpaceshipsComponent,
   }
 ];
 

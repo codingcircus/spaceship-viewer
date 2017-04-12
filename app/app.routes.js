@@ -28,6 +28,10 @@ System.register(['@angular/router', './component.spaceships', './component.space
                     path: '',
                     redirectTo: '/spaceships',
                     pathMatch: 'full',
+                },
+                {
+                    path: 'spaceships/add',
+                    component: component_spaceships_1.SpaceshipsComponent,
                 }
             ];
             exports_1("routing", routing = router_1.RouterModule.forRoot(routes));

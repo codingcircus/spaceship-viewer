@@ -13,11 +13,60 @@
   color: white;
 }
 
-.btn:hover {
+.btn:hover:not(:disabled) {
   color: white;
   background: rgba(18, 172, 255, 0.4);
 }
 
 .btn:active {
   background: rgba(18, 172, 255, 0.7);
+}
+
+.btn--primary {
+  border-color: #73D001;
+  color: #73D001;
+}
+
+.btn--primary:disabled {
+  opacity: .4;
+}
+
+.content-form {
+  padding: 1.4rem;
+}
+
+.input-groups {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-group {
+  padding: 0 0 1.4rem 0;
+}
+
+.input-group__label {
+  display: block;
+}
+
+input,
+[type=submit] {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+}
+
+.input-group__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: .1rem solid #0f0f0f;
+  margin: 0;
+  padding: .7rem;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  height: 3.5rem; 
+}
+
+[type=submit]:not(:disabled) {
+  cursor: pointer;
 }

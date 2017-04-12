@@ -1,0 +1,29 @@
+<div class="top-bar">
+  <a href="#" [routerLink]="['/spaceships']" class="btn">Back</a>
+</div>
+<div class="content-form">
+  <h2>Add a new spaceship</h2>
+  <form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)">
+    <ul class="input-groups">
+      <li class="input-group">
+        <label class="input-group__label" for="name">Name</label>
+        <input class="input-group__input" type="text" id="name" name="name" formControlName="name">
+      </li>
+      <li class="input-group">
+        <label class="input-group__label" for="pilot">Pilot</label>
+        <input class="input-group__input" type="text" id="pilot" name="pilot" formControlName="pilot">
+      </li>
+      <li class="input-group">
+        <label class="input-group__label" for="image">Image</label>
+        <input class="input-group__input" type="text" id="image" name="image" formControlName="image">
+      </li>
+      <li class="input-group">
+        <label class="input-group__label" for="rating">Rating</label>
+        <input class="input-group__input" type="number" id="rating" name="rating" formControlName="rating">
+      </li>
+    </ul>
+    <button type="submit" class="btn btn--primary" [disabled]="!form.valid"><i class="fa fa-plus"></i> Add</button>
+  </form>
+</div>

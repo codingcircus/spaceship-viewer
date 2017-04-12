@@ -24,6 +24,11 @@ export class SpaceshipService {
       .map(response => toSpaceship(response.json()));
     return spaceship$;
   }
+
+  add(spaceship) {
+    return this.http.post(`${this.baseUrl}/spaceships`, spaceship)
+      .map(response => {});
+  }
 }
 
 function mapSpaceships(response: Response): Spaceship[] {

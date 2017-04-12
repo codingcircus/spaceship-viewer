@@ -34,7 +34,7 @@ function mapSpaceships(response: Response): Spaceship[] {
 
 function toSpaceship(r:any): Spaceship{
   let spaceship = <Spaceship>({
-    id: parseInt(r.id),
+    _id: r._id,
     name: r.name,
     pilot: r.pilot,
     image: r.image,

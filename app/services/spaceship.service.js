@@ -19,7 +19,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
     }
     function toSpaceship(r) {
         var spaceship = ({
-            id: parseInt(r.id),
+            _id: r._id,
             name: r.name,
             pilot: r.pilot,
             image: r.image,

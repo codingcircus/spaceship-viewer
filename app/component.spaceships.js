@@ -30,7 +30,9 @@ System.register(['@angular/core', './services/spaceship.service'], function(expo
                     var _this = this;
                     this._spaceshipService
                         .getAll()
-                        .subscribe(function (spaceships) { return _this.spaceships = spaceships; });
+                        .subscribe(function (spaceships) {
+                        _this.spaceships = spaceships;
+                    });
                 };
                 SpaceshipsComponent = __decorate([
                     core_1.Component({

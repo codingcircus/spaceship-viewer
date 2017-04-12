@@ -19,7 +19,7 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
     }
     function toSpaceship(r) {
         var spaceship = ({
-            id: parseInt(r.id),
+            _id: r._id,
             name: r.name,
             pilot: r.pilot,
             image: r.image,
@@ -53,6 +53,14 @@ System.register(['@angular/core', '@angular/http', 'rxjs/add/operator/map'], fun
                         .get(this.baseUrl + "/spaceships/" + id)
                         .map(function (response) { return toSpaceship(response.json()); });
                     return spaceship$;
+                };
+                SpaceshipService.prototype.add = function (spaceship) {
+                    return this.http.post(this.baseUrl + "/spaceships", spaceship)
+                        .map(function (response) { });
+                };
+                SpaceshipService.prototype.delete = function (id) {
+                    return this.http.delete(this.baseUrl + "/spaceships/" + id)
+                        .map(function (response) { });
                 };
                 SpaceshipService = __decorate([
                     core_1.Injectable(), 

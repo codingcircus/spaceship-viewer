@@ -1,0 +1,13 @@
+<div class="top-bar">
+  <a href="#" [routerLink]="['/spaceships']" class="btn">Back</a>
+</div>
+<div class="content-form">
+  <h2>Are you sure, you want to delete {{ data.name }}?</h2>
+  <form
+    (ngSubmit)="onSubmit(data._id)">
+    <div class="actions">
+      <a class="btn btn--secondary" href="#" [routerLink]="['/spaceships', data._id]"><i class="fa fa-close"></i> Cancel</a>
+      <button type="submit" class="btn btn--danger"><i class="fa fa-trash"></i> Delete</button>
+    </div>
+  </form>
+</div>

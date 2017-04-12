@@ -33,3 +33,7 @@ label {
   outline: 0;
   box-shadow: none;
 }
+
+.top-bar__actions {
+  margin-right: auto;
+}

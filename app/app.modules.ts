@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { routing } from './app.routes';
 import { AppComponent } from './component.app';
 import { SpaceshipsComponent } from './component.spaceships';
 import { SpaceshipDetailsComponent } from './component.spaceship-details';
 import { AppHeaderComponent } from './component.app-header';
+import { SpaceshipAddComponent } from './component.spaceship-add';
+import { SpaceshipDeleteComponent } from './component.spaceship-delete'; 
 
 import { SearchPipe } from './pipe.search';
 
@@ -17,6 +19,7 @@ import { SearchPipe } from './pipe.search';
     HttpModule,
     FormsModule,
     routing,
+    ReactiveFormsModule,
   ],
   declarations: [
     AppComponent, 
@@ -24,6 +27,8 @@ import { SearchPipe } from './pipe.search';
     SpaceshipsComponent,
     SpaceshipDetailsComponent,
     SearchPipe,
+    SpaceshipAddComponent,
+    SpaceshipDeleteComponent,
   ],
   bootstrap: [
     AppComponent,

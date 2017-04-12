@@ -10,8 +10,8 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, spaceship_service_1, router_1;
-    var SpaceshipDetailsComponent;
+    var core_1, spaceship_service_1, router_1, router_2;
+    var SpaceshipDeleteComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -22,12 +22,14 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+                router_2 = router_1_1;
             }],
         execute: function() {
-            SpaceshipDetailsComponent = (function () {
-                function SpaceshipDetailsComponent(_spaceshipService, route) {
+            SpaceshipDeleteComponent = (function () {
+                function SpaceshipDeleteComponent(_spaceshipService, route, router) {
                     this._spaceshipService = _spaceshipService;
                     this.route = route;
+                    this.router = router;
                     this.data = {
                         _id: '0',
                         name: 'Loading …',
@@ -36,7 +38,7 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                         rating: 0,
                     };
                 }
-                SpaceshipDetailsComponent.prototype.ngOnInit = function () {
+                SpaceshipDeleteComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this.route.params.subscribe(function (params) {
                         var id = params['id'];
@@ -44,12 +46,19 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                             .subscribe(function (spaceship) { return _this.data = spaceship; });
                     });
                 };
-                SpaceshipDetailsComponent.prototype.ngAfterViewChecked = function () {
+                SpaceshipDeleteComponent.prototype.ngAfterViewChecked = function () {
                 };
-                SpaceshipDetailsComponent = __decorate([
+                SpaceshipDeleteComponent.prototype.onSubmit = function () {
+                    var _this = this;
+                    this._spaceshipService.delete(this.data._id)
+                        .subscribe(function () {
+                        _this.router.navigate(['/']);
+                    });
+                };
+                SpaceshipDeleteComponent = __decorate([
                     core_1.Component({
-                        selector: 'spaceship-details',
-                        templateUrl: 'partials/spaceship-details.html',
+                        selector: 'spaceship-delete',
+                        templateUrl: 'partials/spaceship-delete.html',
                         styleUrls: [
                             './css/top-bar.css',
                             './css/card.css',
@@ -59,12 +68,12 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                             spaceship_service_1.SpaceshipService
                         ],
                     }), 
-                    __metadata('design:paramtypes', [spaceship_service_1.SpaceshipService, router_1.ActivatedRoute])
-                ], SpaceshipDetailsComponent);
-                return SpaceshipDetailsComponent;
+                    __metadata('design:paramtypes', [spaceship_service_1.SpaceshipService, router_2.ActivatedRoute, router_1.Router])
+                ], SpaceshipDeleteComponent);
+                return SpaceshipDeleteComponent;
             }());
-            exports_1("SpaceshipDetailsComponent", SpaceshipDetailsComponent);
+            exports_1("SpaceshipDeleteComponent", SpaceshipDeleteComponent);
         }
     }
 });
-//# sourceMappingURL=component.spaceship-details.js.map
+//# sourceMappingURL=component.spaceship-delete.js.map

@@ -8,6 +8,7 @@ import { SpaceshipService } from './services/spaceship.service';
   styleUrls: [
     'css/top-bar.css',
     'css/spaceships.css',
+    'css/form.css',
   ],
   providers: [
     SpaceshipService
@@ -20,7 +21,9 @@ export class SpaceshipsComponent implements OnInit {
   ngOnInit() {
     this._spaceshipService
       .getAll()
-      .subscribe(spaceships => this.spaceships = spaceships);
+      .subscribe(spaceships => {
+        this.spaceships = spaceships;
+      });
   }
 
   constructor(private _spaceshipService : SpaceshipService) {}

@@ -1,11 +1,12 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Spaceship } from './interfaces/spaceship';
 import { SpaceshipService } from './services/spaceship.service';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'spaceship-details',
-  templateUrl: 'partials/spaceship-details.html',
+  selector: 'spaceship-delete',
+  templateUrl: 'partials/spaceship-delete.html',
   styleUrls: [
     './css/top-bar.css',
     './css/card.css',
@@ -16,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
   ],
 })
 
-export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
+export class SpaceshipDeleteComponent implements OnInit, AfterViewChecked {
   data: Spaceship = {
     _id: '0',
     name: 'Loading …',
@@ -39,5 +40,13 @@ export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
 
   constructor(
     private _spaceshipService : SpaceshipService,
-    private route: ActivatedRoute) {}
+    private route: ActivatedRoute,
+    private router: Router) {}
+
+  onSubmit() {
+    this._spaceshipService.delete(this.data._id)
+      .subscribe(() => {
+        this.router.navigate(['/']);
+      });
+  }
 }

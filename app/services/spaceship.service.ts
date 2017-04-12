@@ -24,6 +24,16 @@ export class SpaceshipService {
       .map(response => toSpaceship(response.json()));
     return spaceship$;
   }
+
+  add(spaceship) {
+    return this.http.post(`${this.baseUrl}/spaceships`, spaceship)
+      .map(response => {});
+  }
+
+  delete(id) {
+    return this.http.delete(`${this.baseUrl}/spaceships/${id}`)
+      .map(response => {});
+  }
 }
 
 function mapSpaceships(response: Response): Spaceship[] {
@@ -34,7 +44,7 @@ function mapSpaceships(response: Response): Spaceship[] {
 
 function toSpaceship(r:any): Spaceship{
   let spaceship = <Spaceship>({
-    id: parseInt(r.id),
+    _id: r._id,
     name: r.name,
     pilot: r.pilot,
     image: r.image,

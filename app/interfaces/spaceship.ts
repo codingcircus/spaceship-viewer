@@ -1,5 +1,5 @@
 export interface Spaceship {
-  id: number;
+  _id: string;
   name: string;
   pilot: string;
   image: string;

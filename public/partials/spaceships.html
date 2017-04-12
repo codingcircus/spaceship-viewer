@@ -5,7 +5,10 @@
   <label for="search">Search for</label>
   <input class="input-search" [(ngModel)]="query" id="search" placeholder="Spaceship …">
 </header>
-<ul class="data-list">
+<div *ngIf="spaceships.length <= 0" class="content-form">
+  <h2>Please add a spaceship</h2>
+</div>
+<ul *ngIf="spaceships.length > 0" class="data-list">
   <li class="data-item" *ngFor="let item of (spaceships | search: query)">
     <a class="data-item__content data-item__content--link" href="#" [routerLink]="['/spaceships', item._id]">Name: {{item.name}} </a>
   </li>

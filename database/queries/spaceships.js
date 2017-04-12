@@ -20,3 +20,7 @@ module.exports.save = function(val) {
   const spaceship = new Spaceship(val);
   return spaceship.save();
 }
+
+module.exports.delete = function(id) {
+  return Spaceship.findByIdAndRemove(new ObjectId(id));
+}

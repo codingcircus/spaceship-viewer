@@ -1,7 +1,7 @@
-System.register(['@angular/router', './component.spaceships', './component.spaceship-details'], function(exports_1, context_1) {
+System.register(['@angular/router', './component.spaceships', './component.spaceship-details', './component.spaceship-add'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var router_1, component_spaceships_1, component_spaceship_details_1;
+    var router_1, component_spaceships_1, component_spaceship_details_1, component_spaceship_add_1;
     var routes, routing;
     return {
         setters:[
@@ -13,9 +13,16 @@ System.register(['@angular/router', './component.spaceships', './component.space
             },
             function (component_spaceship_details_1_1) {
                 component_spaceship_details_1 = component_spaceship_details_1_1;
+            },
+            function (component_spaceship_add_1_1) {
+                component_spaceship_add_1 = component_spaceship_add_1_1;
             }],
         execute: function() {
             routes = [
+                {
+                    path: 'spaceships/add',
+                    component: component_spaceship_add_1.SpaceshipAddComponent,
+                },
                 {
                     path: 'spaceships',
                     component: component_spaceships_1.SpaceshipsComponent,
@@ -29,10 +36,6 @@ System.register(['@angular/router', './component.spaceships', './component.space
                     redirectTo: '/spaceships',
                     pathMatch: 'full',
                 },
-                {
-                    path: 'spaceships/add',
-                    component: component_spaceships_1.SpaceshipsComponent,
-                }
             ];
             exports_1("routing", routing = router_1.RouterModule.forRoot(routes));
         }

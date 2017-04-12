@@ -6,14 +6,24 @@ import { SpaceshipService } from './services/spaceship.service';
 @Component({
   selector: 'spaceship-add',
   templateUrl: 'partials/spaceship-add.html',
+  styleUrls: [
+    './css/top-bar.css',
+    './css/card.css',
+    './css/form.css',
+  ],
+  providers: [
+    SpaceshipService
+  ],
 })
-export class SpaceshipAdd {
+export class SpaceshipAddComponent {
   form: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder, 
     private router: Router,
-    private _spaceshipService : SpaceshipService) {}
+    private _spaceshipService : SpaceshipService) {
+      
+    }
   
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -34,9 +44,6 @@ export class SpaceshipAdd {
   }
 
   onSubmit(spaceship) {
-    this._spaceshipService.add(spaceship)
-      .subscribe(() => {
-        this.router.navigate(['/spaceships']);
-      });
+    console.log(spaceship);
   }
 }

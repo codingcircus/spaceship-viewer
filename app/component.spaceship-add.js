@@ -11,7 +11,7 @@ System.register(['@angular/core', '@angular/forms', '@angular/router', './servic
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, forms_1, router_1, spaceship_service_1;
-    var SpaceshipAdd;
+    var SpaceshipAddComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -27,13 +27,13 @@ System.register(['@angular/core', '@angular/forms', '@angular/router', './servic
                 spaceship_service_1 = spaceship_service_1_1;
             }],
         execute: function() {
-            SpaceshipAdd = (function () {
-                function SpaceshipAdd(formBuilder, router, _spaceshipService) {
+            SpaceshipAddComponent = (function () {
+                function SpaceshipAddComponent(formBuilder, router, _spaceshipService) {
                     this.formBuilder = formBuilder;
                     this.router = router;
                     this._spaceshipService = _spaceshipService;
                 }
-                SpaceshipAdd.prototype.ngOnInit = function () {
+                SpaceshipAddComponent.prototype.ngOnInit = function () {
                     this.form = this.formBuilder.group({
                         name: this.formBuilder.control('', forms_1.Validators.compose([
                             forms_1.Validators.required,
@@ -50,23 +50,27 @@ System.register(['@angular/core', '@angular/forms', '@angular/router', './servic
                         ]))
                     });
                 };
-                SpaceshipAdd.prototype.onSubmit = function (spaceship) {
-                    var _this = this;
-                    this._spaceshipService.add(spaceship)
-                        .subscribe(function () {
-                        _this.router.navigate(['/spaceships']);
-                    });
+                SpaceshipAddComponent.prototype.onSubmit = function (spaceship) {
+                    console.log(spaceship);
                 };
-                SpaceshipAdd = __decorate([
+                SpaceshipAddComponent = __decorate([
                     core_1.Component({
                         selector: 'spaceship-add',
                         templateUrl: 'partials/spaceship-add.html',
+                        styleUrls: [
+                            './css/top-bar.css',
+                            './css/card.css',
+                            './css/form.css',
+                        ],
+                        providers: [
+                            spaceship_service_1.SpaceshipService
+                        ],
                     }), 
                     __metadata('design:paramtypes', [forms_1.FormBuilder, router_1.Router, spaceship_service_1.SpaceshipService])
-                ], SpaceshipAdd);
-                return SpaceshipAdd;
+                ], SpaceshipAddComponent);
+                return SpaceshipAddComponent;
             }());
-            exports_1("SpaceshipAdd", SpaceshipAdd);
+            exports_1("SpaceshipAddComponent", SpaceshipAddComponent);
         }
     }
 });

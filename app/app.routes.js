@@ -28,6 +28,10 @@ System.register(['@angular/router', './component.spaceships', './component.space
                     component: component_spaceships_1.SpaceshipsComponent,
                 },
                 {
+                    path: 'spaceships/:id/delete',
+                    component: component_spaceships_1.SpaceshipsComponent,
+                },
+                {
                     path: 'spaceships/:id',
                     component: component_spaceship_details_1.SpaceshipDetailsComponent,
                 },

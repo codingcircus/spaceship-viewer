@@ -13,6 +13,10 @@ const routes: Routes = [
     component: SpaceshipsComponent,
   },
   {
+    path: 'spaceships/:id/delete',
+    component: SpaceshipsComponent,
+  },
+  {
     path: 'spaceships/:id',
     component: SpaceshipDetailsComponent,
   },

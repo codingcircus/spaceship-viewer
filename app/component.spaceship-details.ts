@@ -18,7 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
   data: Spaceship = {
-    id: 0,
+    _id: '0',
     name: 'Loading …',
     pilot: 'Loading …',
     image: '',
@@ -27,7 +27,7 @@ export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
   
   ngOnInit() {
     this.route.params.subscribe(params => {
-      let id = Number.parseInt(params['id']);
+      let id = params['id'];
       this._spaceshipService.get(id)
         .subscribe(spaceship => this.data = spaceship);
     });

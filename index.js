@@ -2,8 +2,7 @@
 
 const
   express      = require('express'),
-  path = require('path'),
-  spaceships       = require('./data/spaceships.json');
+  path = require('path');
 
 let app = express();
 
@@ -12,14 +11,7 @@ app.use('/node_modules', express.static('node_modules'));
 app.use('/app', express.static('app'));
 
 // api calls
-app.get('/v1/spaceships', (req, res) => {
-  res.json(spaceships);
-});
-
-app.get('/v1/spaceships/:id', (req, res) => {
-  const spaceship = spaceships.find(spaceship => spaceship.id === parseInt(req.params.id, 10));
-  res.json(spaceship);
-});
+app.use(require('./api/spaceships'));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/index.html'));

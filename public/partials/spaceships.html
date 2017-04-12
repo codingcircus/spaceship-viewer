@@ -4,6 +4,6 @@
 </header>
 <ul class="data-list">
   <li class="data-item" *ngFor="let item of (spaceships | search: query)">
-    <a class="data-item__content data-item__content--link" href="#" [routerLink]="['/spaceships', item.id]">Name: {{item.name}}</a>
+    <a class="data-item__content data-item__content--link" href="#" [routerLink]="['/spaceships', item._id]">Name: {{item.name}} </a>
   </li>
 </ul>

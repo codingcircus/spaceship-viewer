@@ -11,7 +11,7 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, spaceship_service_1, router_1;
-    var SpaceshipDetailsComponent;
+    var SpaceshipDeleteComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -24,8 +24,8 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                 router_1 = router_1_1;
             }],
         execute: function() {
-            SpaceshipDetailsComponent = (function () {
-                function SpaceshipDetailsComponent(_spaceshipService, route) {
+            SpaceshipDeleteComponent = (function () {
+                function SpaceshipDeleteComponent(_spaceshipService, route) {
                     this._spaceshipService = _spaceshipService;
                     this.route = route;
                     this.data = {
@@ -36,7 +36,7 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                         rating: 0,
                     };
                 }
-                SpaceshipDetailsComponent.prototype.ngOnInit = function () {
+                SpaceshipDeleteComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this.route.params.subscribe(function (params) {
                         var id = params['id'];
@@ -44,11 +44,11 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                             .subscribe(function (spaceship) { return _this.data = spaceship; });
                     });
                 };
-                SpaceshipDetailsComponent.prototype.ngAfterViewChecked = function () {
+                SpaceshipDeleteComponent.prototype.ngAfterViewChecked = function () {
                 };
-                SpaceshipDetailsComponent.prototype.onSubmit = function () {
+                SpaceshipDeleteComponent.prototype.onSubmit = function () {
                 };
-                SpaceshipDetailsComponent = __decorate([
+                SpaceshipDeleteComponent = __decorate([
                     core_1.Component({
                         selector: 'spaceship-delete',
                         templateUrl: 'partials/spaceship-delete.html',
@@ -62,10 +62,10 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                         ],
                     }), 
                     __metadata('design:paramtypes', [spaceship_service_1.SpaceshipService, router_1.ActivatedRoute])
-                ], SpaceshipDetailsComponent);
-                return SpaceshipDetailsComponent;
+                ], SpaceshipDeleteComponent);
+                return SpaceshipDeleteComponent;
             }());
-            exports_1("SpaceshipDetailsComponent", SpaceshipDetailsComponent);
+            exports_1("SpaceshipDeleteComponent", SpaceshipDeleteComponent);
         }
     }
 });

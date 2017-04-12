@@ -2,6 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SpaceshipsComponent } from './component.spaceships';
 import { SpaceshipDetailsComponent } from './component.spaceship-details';
 import { SpaceshipAddComponent } from './component.spaceship-add'; 
+import { SpaceshipDeleteComponent } from './component.spaceship-delete'; 
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'spaceships/:id/delete',
-    component: SpaceshipsComponent,
+    component: SpaceshipDeleteComponent,
   },
   {
     path: 'spaceships/:id',

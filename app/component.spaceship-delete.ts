@@ -16,7 +16,7 @@ import { ActivatedRoute } from '@angular/router';
   ],
 })
 
-export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
+export class SpaceshipDeleteComponent implements OnInit, AfterViewChecked {
   data: Spaceship = {
     _id: '0',
     name: 'Loading …',
@@ -42,6 +42,6 @@ export class SpaceshipDetailsComponent implements OnInit, AfterViewChecked {
     private route: ActivatedRoute) {}
 
   onSubmit() {
-    
+
   }
 }

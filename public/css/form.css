@@ -27,6 +27,17 @@
   color: #73D001;
 }
 
+.btn--danger {
+  border-color: #A91C3E;
+  color: #A91C3E;
+}
+
+.btn--secondary:link,
+.btn--secondary:visited {
+  border-color: gray;
+  color: gray;
+}
+
 .btn--primary:disabled {
   opacity: .4;
 }
@@ -51,6 +62,7 @@
 
 input,
 [type=submit] {
+  margin: 0;
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
 }
@@ -69,4 +81,13 @@ input,
 
 [type=submit]:not(:disabled) {
   cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: center; 
+}
+
+.actions > *:not(:last-child) {
+  margin-right: .7rem;
 }

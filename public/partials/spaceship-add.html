@@ -1,0 +1,22 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+  <ul class="input-groups">
+    <li class="input-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" formControlName="name">
+    </li>
+    <li class="input-group">
+      <label for="pilot">Pilot</label>
+      <input type="text" id="pilot" name="pilot" formControlName="pilot">
+    </li>
+    <li class="input-group">
+      <label for="image">Image</label>
+      <input type="text" id="image" name="image" formControlName="image">
+    </li>
+    <li class="input-group">
+      <label for="rating">Rating</label>
+      <input type="number" id="rating" name="rating" formControlName="rating">
+    </li>
+  </ul>
+</form>

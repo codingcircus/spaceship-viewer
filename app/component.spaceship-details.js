@@ -29,7 +29,7 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                     this._spaceshipService = _spaceshipService;
                     this.route = route;
                     this.data = {
-                        id: 0,
+                        _id: '0',
                         name: 'Loading …',
                         pilot: 'Loading …',
                         image: '',
@@ -39,7 +39,7 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                 SpaceshipDetailsComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this.route.params.subscribe(function (params) {
-                        var id = Number.parseInt(params['id']);
+                        var id = params['id'];
                         _this._spaceshipService.get(id)
                             .subscribe(function (spaceship) { return _this.data = spaceship; });
                     });

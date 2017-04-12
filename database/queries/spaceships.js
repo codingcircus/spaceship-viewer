@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Spaceship = require('../models/spaceship');
+const ObjectId = require('mongoose').Types.ObjectId
 
 mongoose.connect('mongodb://localhost/spaceship-viewer');
 mongoose.connection
@@ -11,8 +12,8 @@ module.exports.getAll = function() {
   return Spaceship.find();
 }
 
-module.exports.get = function(_id) {
-  return Spaceship.findOne({ _id });
+module.exports.get = function(id) {
+  return Spaceship.findOne({ _id: new ObjectId(id) });
 }
 
 module.exports.save = function(val) {

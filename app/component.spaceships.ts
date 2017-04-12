@@ -8,6 +8,7 @@ import { SpaceshipService } from './services/spaceship.service';
   styleUrls: [
     'css/top-bar.css',
     'css/spaceships.css',
+    'css/form.css',
   ],
   providers: [
     SpaceshipService

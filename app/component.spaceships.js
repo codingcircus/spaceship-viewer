@@ -41,6 +41,7 @@ System.register(['@angular/core', './services/spaceship.service'], function(expo
                         styleUrls: [
                             'css/top-bar.css',
                             'css/spaceships.css',
+                            'css/form.css',
                         ],
                         providers: [
                             spaceship_service_1.SpaceshipService

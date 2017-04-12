@@ -44,6 +44,10 @@ export class SpaceshipAddComponent {
   }
 
   onSubmit(spaceship) {
-    console.log(spaceship);
+    this._spaceshipService.add(spaceship)
+      .subscribe(() => {
+        console.log('Success');
+        this.router.navigate(['/']);
+      });
   }
 }

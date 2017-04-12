@@ -51,7 +51,12 @@ System.register(['@angular/core', '@angular/forms', '@angular/router', './servic
                     });
                 };
                 SpaceshipAddComponent.prototype.onSubmit = function (spaceship) {
-                    console.log(spaceship);
+                    var _this = this;
+                    this._spaceshipService.add(spaceship)
+                        .subscribe(function () {
+                        console.log('Success');
+                        _this.router.navigate(['/']);
+                    });
                 };
                 SpaceshipAddComponent = __decorate([
                     core_1.Component({

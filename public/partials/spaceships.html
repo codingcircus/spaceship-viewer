@@ -1,5 +1,7 @@
 <header class="top-bar">
-  <a class="button" href="#" [routerLink]="['/spaceships/add']"><i class="fa fa-plus"></i>Add Spaceship</a>
+  <div class="top-bar__actions">
+    <a class="btn top-bar__action" href="#" [routerLink]="['/spaceships/add']"><i class="fa fa-plus"></i> Add Spaceship</a>
+  </div>
   <label for="search">Search for</label>
   <input class="input-search" [(ngModel)]="query" id="search" placeholder="Spaceship …">
 </header>

@@ -67,6 +67,6 @@ input,
   height: 3.5rem; 
 }
 
-[type=submit] {
+[type=submit]:not(:disabled) {
   cursor: pointer;
 }

@@ -52,7 +52,6 @@ System.register(['@angular/core', './services/spaceship.service', '@angular/rout
                     var _this = this;
                     this._spaceshipService.delete(this.data._id)
                         .subscribe(function () {
-                        console.log('Success');
                         _this.router.navigate(['/']);
                     });
                 };

@@ -46,7 +46,6 @@ export class SpaceshipDeleteComponent implements OnInit, AfterViewChecked {
   onSubmit() {
     this._spaceshipService.delete(this.data._id)
       .subscribe(() => {
-        console.log('Success');
         this.router.navigate(['/']);
       });
   }

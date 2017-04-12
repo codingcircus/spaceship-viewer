@@ -54,7 +54,6 @@ System.register(['@angular/core', '@angular/forms', '@angular/router', './servic
                     var _this = this;
                     this._spaceshipService.add(spaceship)
                         .subscribe(function () {
-                        console.log('Success');
                         _this.router.navigate(['/']);
                     });
                 };
